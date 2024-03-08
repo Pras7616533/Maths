@@ -62,7 +62,7 @@ if __name__ == "__main__":
     f = sp.lambdify(x, sp.sympify(expression))
 
     # Ask user for an initial guess
-#    guess = float(input("Enter an initial guess for the root: "))
+    # guess = float(input("Enter an initial guess for the root: "))
 
     # Find the initial interval
     a, b = find_initial_interval(f)
@@ -72,7 +72,7 @@ if __name__ == "__main__":
             if b - a == 1:
                 break
             a += 1
-
+    print (f"f(a)={f(a)} f(b)={f(b)}")
     # Call the bisection method
     root = bisection_method(f, a, b)
 
